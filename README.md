@@ -249,22 +249,30 @@ The built site will be in the `dist/` folder (or the directory specified in `ast
 
 This project uses [Semantic Versioning](https://semver.org/) and maintains a [CHANGELOG.md](CHANGELOG.md) for tracking changes.
 
-### Version Scripts
+### Automated Release Process
+
+Releases are automated via GitHub Actions. When you push a tag, the workflow will:
+- ✅ Run type checking and build
+- ✅ Extract changelog for the version
+- ✅ Create GitHub release with changelog
+- ✅ Upload distribution archives
+
+### Creating a Release
 
 ```bash
-# Automatic versioning (determines version based on commits)
-npm run release
+# 1. Create release with automatic changelog
+npm run release         # Auto-detect version bump
+npm run release:patch   # 0.1.0 -> 0.1.1
+npm run release:minor   # 0.1.0 -> 0.2.0
+npm run release:major   # 0.1.0 -> 1.0.0
 
-# Specific version bumps
-npm run release:patch  # 1.0.0 -> 1.0.1
-npm run release:minor  # 1.0.0 -> 1.1.0
-npm run release:major  # 1.0.0 -> 2.0.0
+# 2. Push to trigger automated release
+git push --follow-tags origin main
 
-# Manual version bumps (without changelog generation)
-npm run version:patch
-npm run version:minor
-npm run version:major
+# GitHub Actions will automatically create the release! 🎉
 ```
+
+For detailed release instructions, see [.github/RELEASE.md](.github/RELEASE.md).
 
 ### Conventional Commits
 
