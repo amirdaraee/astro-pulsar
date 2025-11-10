@@ -7,25 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-- Comprehensive testing documentation and test suite
-- Test blog post for verifying theme functionality
-
-### Changed
-- Removed Bootstrap dependency, now using pure Tailwind CSS
-- Updated all documentation to reflect Tailwind-only stack
-- Fixed TypeScript error in blog post template (invalid ARIA role)
-
-### Removed
-- Bootstrap package and all references
-
-## [1.0.0] - 2024-11-10
+## [0.1.0] - 2024-11-10
 
 ### Added
 - Initial release of Astro Pulsar theme
 - Dark mode support with localStorage persistence
 - SEO optimization (meta tags, Open Graph, Twitter Cards, JSON-LD)
-- Responsive design with Tailwind CSS
+- Responsive design with pure Tailwind CSS (no Bootstrap)
 - Blog functionality with Astro Content Collections
 - Syntax highlighting with Prism (GitHub Dark theme)
 - Automatic sitemap generation
@@ -36,6 +24,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Custom 404 error page
 - Print-friendly styles for blog posts
 - Skip-to-content link for accessibility
+- Comprehensive testing documentation and test suite
+- Test blog post for verifying theme functionality
+- Versioning and changelog system with standard-version
+- Contributing guidelines and commit conventions
 
 ### Components
 - Layout system with customizable header and footer
@@ -56,6 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - TypeScript support with strict type checking
 - Tailwind CSS configuration with dark mode support
 - Astro configuration with sitemap integration
+- Standard-version configuration for automated releases
 
 ---
 
@@ -74,5 +67,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **MINOR** version (0.X.0): New functionality in a backwards compatible manner
 - **PATCH** version (0.0.X): Backwards compatible bug fixes
 
-[Unreleased]: https://github.com/yourusername/astro-pulsar/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/yourusername/astro-pulsar/releases/tag/v1.0.0
+[Unreleased]: https://github.com/yourusername/astro-pulsar/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/yourusername/astro-pulsar/releases/tag/v0.1.0
