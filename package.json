@@ -34,7 +34,15 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "version:patch": "npm version patch -m \"chore: bump version to %s\"",
+    "version:minor": "npm version minor -m \"chore: bump version to %s\"",
+    "version:major": "npm version major -m \"chore: bump version to %s\"",
+    "release": "npm run build && standard-version",
+    "release:minor": "npm run build && standard-version --release-as minor",
+    "release:major": "npm run build && standard-version --release-as major",
+    "release:patch": "npm run build && standard-version --release-as patch",
+    "release:first": "npm run build && standard-version --first-release"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -45,6 +53,7 @@
   "devDependencies": {
     "@astrojs/tailwind": "^6.0.2",
     "@types/node": "^22.9.0",
+    "standard-version": "^9.5.0",
     "tailwindcss": "^3.4.1"
   }
 }

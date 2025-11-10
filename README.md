@@ -245,9 +245,57 @@ The built site will be in the `dist/` folder (or the directory specified in `ast
 - Safari (latest)
 - Edge (latest)
 
+## Versioning & Releases
+
+This project uses [Semantic Versioning](https://semver.org/) and maintains a [CHANGELOG.md](CHANGELOG.md) for tracking changes.
+
+### Version Scripts
+
+```bash
+# Automatic versioning (determines version based on commits)
+npm run release
+
+# Specific version bumps
+npm run release:patch  # 1.0.0 -> 1.0.1
+npm run release:minor  # 1.0.0 -> 1.1.0
+npm run release:major  # 1.0.0 -> 2.0.0
+
+# Manual version bumps (without changelog generation)
+npm run version:patch
+npm run version:minor
+npm run version:major
+```
+
+### Conventional Commits
+
+We follow [Conventional Commits](https://www.conventionalcommits.org/) for clear, structured commit messages:
+
+- `feat:` - New features (minor version bump)
+- `fix:` - Bug fixes (patch version bump)
+- `docs:` - Documentation changes
+- `style:` - Code style changes (formatting, missing semi-colons, etc.)
+- `refactor:` - Code refactoring
+- `perf:` - Performance improvements
+- `test:` - Adding or updating tests
+- `chore:` - Maintenance tasks
+
+Example:
+```bash
+git commit -m "feat: add RSS feed support"
+git commit -m "fix: resolve dark mode toggle issue on Safari"
+git commit -m "docs: update installation instructions"
+```
+
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please:
+
+1. Follow the [Conventional Commits](https://www.conventionalcommits.org/) specification
+2. Update tests and documentation as needed
+3. Ensure builds pass: `npm run build`
+4. Submit a Pull Request
+
+For more details, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
