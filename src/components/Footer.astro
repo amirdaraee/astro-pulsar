@@ -1,0 +1,80 @@
+---
+import { SITE_CONFIG } from '../config';
+
+const currentYear = new Date().getFullYear();
+
+interface Props {
+  showCopyright?: boolean;
+  compact?: boolean;
+}
+
+const { showCopyright = true, compact = false } = Astro.props;
+const paddingClass = compact ? 'py-4' : 'py-8';
+
+// Social links configuration
+const socialLinks = [
+  {
+    name: 'GitHub',
+    url: SITE_CONFIG.socialLinks.github ? `https://github.com/${SITE_CONFIG.socialLinks.github}` : null,
+    icon: 'fa-github',
+    hoverColor: 'hover:text-gray-900 dark:hover:text-white',
+  },
+  {
+    name: 'LinkedIn',
+    url: SITE_CONFIG.socialLinks.linkedin ? `https://www.linkedin.com/in/${SITE_CONFIG.socialLinks.linkedin}` : null,
+    icon: 'fa-linkedin',
+    hoverColor: 'hover:text-blue-600 dark:hover:text-blue-400',
+  },
+  {
+    name: 'Twitter',
+    url: SITE_CONFIG.socialLinks.twitter ? `https://twitter.com/${SITE_CONFIG.socialLinks.twitter}` : null,
+    icon: 'fa-twitter',
+    hoverColor: 'hover:text-blue-400 dark:hover:text-blue-300',
+  },
+  {
+    name: 'YouTube',
+    url: SITE_CONFIG.socialLinks.youtube ? `https://www.youtube.com/c/${SITE_CONFIG.socialLinks.youtube}` : null,
+    icon: 'fa-youtube-play',
+    hoverColor: 'hover:text-red-600 dark:hover:text-red-400',
+  },
+].filter(link => link.url); // Only show configured social links
+---
+
+<footer id="footer" class={`flex flex-col text-center ${paddingClass} bg-gray-50 dark:bg-gray-800 transition-colors duration-200`}>
+  <!-- Social buttons -->
+  {socialLinks.length > 0 && (
+    <div class="text-center">
+      <h4 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">You can find me at</h4>
+      <ul class="flex justify-center items-center space-x-4 list-none">
+        {socialLinks.map(link => (
+          <li>
+            <a
+              href={link.url!}
+              target="_blank"
+              rel="noopener noreferrer"
+              class={`text-gray-700 ${link.hoverColor} dark:text-gray-300 transition-colors duration-200`}
+              title={link.name}
+              aria-label={link.name}
+            >
+              <i class={`fa ${link.icon} fa-2x`} aria-hidden="true"></i>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+  <!-- Social buttons end -->
+
+  {showCopyright && (
+    <>
+      <hr class="my-6 border-gray-300 dark:border-gray-700 w-full max-w-md mx-auto" />
+
+      <!-- Copyright -->
+      <div class="text-gray-600 dark:text-gray-400 text-sm">
+        Copyright © {currentYear}
+        <a href={SITE_CONFIG.siteUrl} class="text-gray-900 hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-400 font-medium">{SITE_CONFIG.author}</a>
+      </div>
+      <!-- Copyright end -->
+    </>
+  )}
+</footer>

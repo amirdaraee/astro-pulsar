@@ -1,0 +1,52 @@
+{
+  "name": "astro-pulsar",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Pulsar - A fast, modern Astro blog theme with dark mode, SEO optimization, and responsive design. Built with Bootstrap and Tailwind CSS for the modern web.",
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "keywords": [
+    "astro",
+    "astro-theme",
+    "pulsar",
+    "blog",
+    "blog-theme",
+    "dark-mode",
+    "seo",
+    "bootstrap",
+    "tailwind",
+    "tailwindcss",
+    "typescript",
+    "accessible",
+    "responsive",
+    "fast",
+    "modern"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/astro-pulsar"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/astro-pulsar/issues"
+  },
+  "homepage": "https://github.com/yourusername/astro-pulsar#readme",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^4.16.18",
+    "bootstrap": "^5.3.3",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "@types/node": "^22.9.0",
+    "tailwindcss": "^3.4.1"
+  }
+}
