@@ -1,6 +1,6 @@
 # Pulsar
 
-⚡ A fast, modern Astro blog theme with dark mode, SEO optimization, and responsive design built with Bootstrap and Tailwind CSS.
+⚡ A fast, modern Astro blog theme with dark mode, SEO optimization, and responsive design built with Tailwind CSS.
 
 ![Pulsar - Astro Blog Theme](screenshot.png)
 
@@ -21,7 +21,7 @@
 ## Tech Stack
 
 - **Framework:** [Astro](https://astro.build)
-- **Styling:** [Bootstrap 5](https://getbootstrap.com) + [Tailwind CSS](https://tailwindcss.com)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com)
 - **Language:** [TypeScript](https://www.typescriptlang.org)
 - **Syntax Highlighting:** [Prism](https://prismjs.com)
 - **Icons:** [Font Awesome 4.7](https://fontawesome.com/v4)
@@ -264,7 +264,6 @@ If you encounter any issues or have questions:
 
 Built with:
 - [Astro](https://astro.build)
-- [Bootstrap](https://getbootstrap.com)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Font Awesome](https://fontawesome.com)
 
