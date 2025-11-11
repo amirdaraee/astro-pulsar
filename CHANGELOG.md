@@ -4,12 +4,21 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.2.2](https://github.com/amirdaraee/astro-pulsar/compare/v0.2.1...v0.2.2) (2025-11-11)
 
+### Fixed
+- Fixed GitHub Actions build failures
+- Resolved TypeScript errors in Layout.astro
+- Corrected Footer component prop interface
 
-### Code Refactoring
-
-* remove showCopyright prop from Layout component ([ac223bd](https://github.com/amirdaraee/astro-pulsar/commit/ac223bd15a1f861fe72c4b0180c2c309711d749c))
+### Changed
+- Improved GitHub release notes workflow to extract full changelog content
+- Updated release automation to handle both standard-version and Keep a Changelog formats
 
 ### [0.2.1](https://github.com/amirdaraee/astro-pulsar/compare/v0.2.0...v0.2.1) (2025-11-11)
+
+### Fixed
+- Fixed build errors caused by `showCopyright` prop references
+- Removed unused `showCopyright` from Layout.astro Props interface
+- Updated index.astro to remove `showCopyright` prop
 
 ## [0.2.0] - 2024-11-11
 

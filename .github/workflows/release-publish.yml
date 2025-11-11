@@ -85,7 +85,7 @@ jobs:
           if [ -z "$CHANGELOG" ] || [ $(echo "$CHANGELOG" | wc -l) -lt 2 ]; then
             CHANGELOG="Release $VERSION
 
-See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for full details."
+          See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for full details."
           fi
 
           # Save changelog to file
