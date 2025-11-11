@@ -72,25 +72,31 @@ jobs:
           VERSION="${{ needs.validate.outputs.version-number }}"
           echo "Extracting changelog for version: $VERSION"
 
-          # Extract the section between this version and the next version header
-          CHANGELOG=$(awk "/## \[$VERSION\]/,/## \[/" CHANGELOG.md | sed '$d' | tail -n +3)
+          # Try both standard-version format (###) and Keep a Changelog format (##)
+          # First, try to find the version with ### (standard-version format)
+          CHANGELOG=$(awk "/### \[$VERSION\]/,/(^### \[|^## \[)/" CHANGELOG.md | sed '$d' | tail -n +2)
 
-          # If changelog is empty, provide a fallback
-          if [ -z "$CHANGELOG" ]; then
+          # If empty, try ## format (Keep a Changelog format)
+          if [ -z "$CHANGELOG" ] || [ $(echo "$CHANGELOG" | wc -l) -lt 2 ]; then
+            CHANGELOG=$(awk "/## \[$VERSION\]/,/(^### \[|^## \[)/" CHANGELOG.md | sed '$d' | tail -n +2)
+          fi
+
+          # If still empty, provide a fallback
+          if [ -z "$CHANGELOG" ] || [ $(echo "$CHANGELOG" | wc -l) -lt 2 ]; then
             CHANGELOG="Release $VERSION
 
-          See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for full details."
+See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for full details."
           fi
 
           # Save changelog to file
           {
-            echo "# Astro Pulsar ${{ needs.validate.outputs.version }}"
+            echo "## [$VERSION] - $(date +%Y-%m-%d)"
             echo ""
             echo "$CHANGELOG"
             echo ""
             echo "---"
             echo ""
-            echo "**Full Changelog**: https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md"
+            echo "**Full Changelog**: https://github.com/${{ github.repository }}/compare/v$VERSION...HEAD"
           } > /tmp/release-notes.md
 
           echo "Changelog extracted successfully"
