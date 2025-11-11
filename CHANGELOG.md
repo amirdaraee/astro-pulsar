@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/amirdaraee/astro-pulsar/compare/v0.2.1...v0.2.2) (2025-11-11)
+
+
+### Code Refactoring
+
+* remove showCopyright prop from Layout component ([ac223bd](https://github.com/amirdaraee/astro-pulsar/commit/ac223bd15a1f861fe72c4b0180c2c309711d749c))
+
 ### [0.2.1](https://github.com/amirdaraee/astro-pulsar/compare/v0.2.0...v0.2.1) (2025-11-11)
 
 ## [0.2.0] - 2024-11-11
