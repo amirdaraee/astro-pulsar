@@ -8,15 +8,15 @@ export const SITE_CONFIG = {
   // Basic site information
   title: "My Blog",
   description: "A modern blog built with Astro",
-  author: "Your Name",
-  email: "your.email@example.com",
+  author: "amirdaraee",
+  email: "amirdaraee@gmail.com",
 
   // Social media links
   // Remove or leave empty any platforms you don't use
   socialLinks: {
-    github: "yourusername",
-    twitter: "yourusername",
-    linkedin: "yourusername",
+    github: "amirdaraee",
+    twitter: "amirdaraee",
+    linkedin: "amirdaraee",
     youtube: "", // Leave empty if not used
   },
 

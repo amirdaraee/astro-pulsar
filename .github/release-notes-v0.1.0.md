@@ -60,7 +60,7 @@ Initial release of Astro Pulsar - A fast, modern blog theme built with Astro and
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/astro-pulsar.git
+git clone https://github.com/amirdaraee/astro-pulsar.git
 
 # Install dependencies
 npm install
@@ -80,9 +80,9 @@ Visit `http://localhost:4321` to see your blog.
 
 ## 📚 Documentation
 
-- [README.md](https://github.com/yourusername/astro-pulsar/blob/main/README.md) - Full documentation
-- [CONTRIBUTING.md](https://github.com/yourusername/astro-pulsar/blob/main/CONTRIBUTING.md) - Contribution guidelines
-- [CHANGELOG.md](https://github.com/yourusername/astro-pulsar/blob/main/CHANGELOG.md) - Version history
+- [README.md](https://github.com/amirdaraee/astro-pulsar/blob/main/README.md) - Full documentation
+- [CONTRIBUTING.md](https://github.com/amirdaraee/astro-pulsar/blob/main/CONTRIBUTING.md) - Contribution guidelines
+- [CHANGELOG.md](https://github.com/amirdaraee/astro-pulsar/blob/main/CHANGELOG.md) - Version history
 
 ## 🤝 Contributing
 
@@ -94,4 +94,4 @@ MIT License - Free for personal and commercial use.
 
 ---
 
-**Full Changelog**: https://github.com/yourusername/astro-pulsar/blob/main/CHANGELOG.md
+**Full Changelog**: https://github.com/amirdaraee/astro-pulsar/blob/main/CHANGELOG.md

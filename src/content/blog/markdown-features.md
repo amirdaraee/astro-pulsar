@@ -3,8 +3,10 @@ title: "Markdown Features and Typography"
 description: "Explore the markdown features and typography options available in this theme"
 published: true
 date: 2024-01-10
-author: "Your Name"
+author: "amirdaraee"
 keywords: ["markdown", "typography", "formatting", "writing"]
+photo: "/sample-2.jpg"
+imgCredit: "Photo by Sample Image 2"
 language: "en"
 ---
 

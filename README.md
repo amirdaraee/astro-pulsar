@@ -32,7 +32,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/astro-pulsar.git my-blog
+git clone https://github.com/amirdaraee/astro-pulsar.git my-blog
 
 # Navigate to the directory
 cd my-blog
@@ -45,7 +45,7 @@ Or use as a template directly on GitHub.
 
 **Quick start with npm:**
 ```bash
-npm create astro@latest -- --template yourusername/astro-pulsar
+npm create astro@latest -- --template amirdaraee/astro-pulsar
 ```
 
 ### 2. Configure Your Site
@@ -56,13 +56,13 @@ Edit `src/config.ts` to personalize your blog:
 export const SITE_CONFIG = {
   title: "My Awesome Blog",
   description: "Thoughts on web development, design, and more",
-  author: "Your Name",
-  email: "your.email@example.com",
+  author: "amirdaraee",
+  email: "amirdaraee@gmail.com",
 
   socialLinks: {
-    github: "yourusername",
-    twitter: "yourusername",
-    linkedin: "yourusername",
+    github: "amirdaraee",
+    twitter: "amirdaraee",
+    linkedin: "amirdaraee",
     youtube: "yourchannel", // Leave empty if not used
   },
 
@@ -135,7 +135,7 @@ title: "Your Post Title"
 description: "A brief description of your post"
 published: true
 date: 2024-01-15
-author: "Your Name"
+author: "amirdaraee"
 keywords: ["keyword1", "keyword2"]
 photo: "/stock/your-image.jpg"
 language: "en"
@@ -231,7 +231,7 @@ The built site will be in the `dist/` folder (or the directory specified in `ast
 1. Update `astro.config.mjs`:
    ```javascript
    export default defineConfig({
-     site: 'https://yourusername.github.io',
+     site: 'https://amirdaraee.github.io',
      outDir: './docs', // or '../docs'
    });
    ```
@@ -313,7 +313,7 @@ MIT License - feel free to use this theme for personal or commercial projects.
 
 If you encounter any issues or have questions:
 
-- Open an issue on [GitHub](https://github.com/yourusername/astro-pulsar/issues)
+- Open an issue on [GitHub](https://github.com/amirdaraee/astro-pulsar/issues)
 - Check the [Astro documentation](https://docs.astro.build)
 
 ## Credits

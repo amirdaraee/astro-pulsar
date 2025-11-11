@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.0",
   "description": "Pulsar - A fast, modern Astro blog theme with dark mode, SEO optimization, and responsive design. Built with Tailwind CSS for the modern web.",
-  "author": "Your Name <your.email@example.com>",
+  "author": "amirdaraee",
   "license": "MIT",
   "keywords": [
     "astro",
@@ -23,12 +23,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/astro-pulsar"
+    "url": "https://github.com/amirdaraee/astro-pulsar"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/astro-pulsar/issues"
+    "url": "https://github.com/amirdaraee/astro-pulsar/issues"
   },
-  "homepage": "https://github.com/yourusername/astro-pulsar#readme",
+  "homepage": "https://github.com/amirdaraee/astro-pulsar#readme",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

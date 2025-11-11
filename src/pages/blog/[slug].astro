@@ -86,9 +86,9 @@ const structuredData = {
         {post.data.photo && (
           <figure class="mb-4">
             <picture>
-              <source srcset={`/${post.data.photo.replace(/\.(png|jpg|jpeg)$/, '.webp')}`} type="image/webp">
+              <source srcset={post.data.photo.replace(/\.(png|jpg|jpeg)$/, '.webp')} type="image/webp">
               <img
-                src={`/${post.data.photo}`}
+                src={post.data.photo}
                 alt={`Featured image for ${post.data.title}`}
                 class="w-full h-auto rounded-lg"
                 loading="eager"

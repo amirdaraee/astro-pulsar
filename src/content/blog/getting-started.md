@@ -3,9 +3,10 @@ title: "Getting Started with Your New Blog"
 description: "Learn how to customize and start using your new Astro blog theme"
 published: true
 date: 2024-01-15
-author: "Your Name"
+author: "amirdaraee"
 keywords: ["astro", "blog", "getting started", "tutorial"]
-photo: "/stock/blog-header.webp"
+photo: "/sample-1.jpg"
+imgCredit: "Photo by Sample Image 1"
 language: "en"
 ---
 
@@ -33,7 +34,7 @@ title: "Your Post Title"
 description: "A brief description of your post"
 published: true
 date: 2024-01-15
-author: "Your Name"
+author: "amirdaraee"
 keywords: ["keyword1", "keyword2"]
 photo: "/path/to/image.jpg"
 language: "en"

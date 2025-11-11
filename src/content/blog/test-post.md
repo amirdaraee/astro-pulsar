@@ -3,7 +3,7 @@ title: "Test Post - Theme Functionality Check"
 description: "This is a comprehensive test post to verify all blog features are working correctly"
 published: true
 date: 2025-11-10
-author: "Test Author"
+author: "amirdaraee"
 keywords: ["test", "demo", "functionality", "astro"]
 language: "en"
 ---

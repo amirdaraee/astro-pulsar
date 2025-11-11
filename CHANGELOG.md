@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2024-11-11
+
+### Added
+- WebP image support with automatic conversion for optimized performance
+- Sample blog post images (sample-1.jpg, sample-2.jpg) with WebP versions
+- Logo WebP version with 98% size reduction (17KB vs 829KB)
+- Custom favicon set (16x16, 32x32, Apple touch icon, Android chrome icons)
+
+### Changed
+- Updated author information to "amirdaraee" throughout the project
+- Updated GitHub repository URLs to amirdaraee/astro-pulsar
+- Updated email to amirdaraee@gmail.com
+- Blog post images now use sample-1.jpg and sample-2.jpg with image credits
+- All blog post authors updated to "amirdaraee"
+
+### Fixed
+- Fixed double slash bug in blog image paths (was //sample-1.webp, now /sample-1.webp)
+- Fixed image loading issues in blog listing and individual post pages
+- Corrected image path handling in blog templates
+
+### Removed
+- Copyright notice from footer (keeping only social links)
+
 ## [0.1.0] - 2024-11-10
 
 ### Added
@@ -67,5 +90,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **MINOR** version (0.X.0): New functionality in a backwards compatible manner
 - **PATCH** version (0.0.X): Backwards compatible bug fixes
 
-[Unreleased]: https://github.com/yourusername/astro-pulsar/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/yourusername/astro-pulsar/releases/tag/v0.1.0
+[Unreleased]: https://github.com/amirdaraee/astro-pulsar/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/amirdaraee/astro-pulsar/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/amirdaraee/astro-pulsar/releases/tag/v0.1.0

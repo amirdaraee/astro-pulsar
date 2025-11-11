@@ -3,7 +3,7 @@ title: "Theme Customization Guide"
 description: "Learn how to customize colors, fonts, and other aspects of your blog theme"
 published: true
 date: 2024-01-05
-author: "Your Name"
+author: "amirdaraee"
 keywords: ["customization", "theming", "configuration", "design"]
 photo: "/stock/customization.webp"
 language: "en"
@@ -29,13 +29,13 @@ Example configuration:
 export const SITE_CONFIG = {
   title: "My Awesome Blog",
   description: "Thoughts on web development, design, and more",
-  author: "Your Name",
-  email: "your.email@example.com",
+  author: "amirdaraee",
+  email: "amirdaraee@gmail.com",
 
   socialLinks: {
-    github: "yourusername",
-    twitter: "yourusername",
-    linkedin: "yourusername",
+    github: "amirdaraee",
+    twitter: "amirdaraee",
+    linkedin: "amirdaraee",
     youtube: "yourchannel"
   },
 
