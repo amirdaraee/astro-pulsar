@@ -22,7 +22,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "headline": post.data.title,
   "description": post.data.description,
-  "image": post.data.photo ? `${SITE_CONFIG.siteUrl}/${post.data.photo.replace(/\.(png|jpg|jpeg)$/, '.webp')}` : `${SITE_CONFIG.siteUrl}/logo.webp`,
+  "image": post.data.photo ? `${SITE_CONFIG.siteUrl}${post.data.photo.replace(/\.(png|jpg|jpeg)$/, '.webp')}` : `${SITE_CONFIG.siteUrl}/logo.webp`,
   "datePublished": post.data.date.toISOString(),
   "dateModified": post.data.date.toISOString(),
   "author": {
@@ -89,9 +89,9 @@ const structuredData = {
         {post.data.photo && (
           <figure class="mb-4">
             <picture>
-              <source srcset={post.data.photo.replace(/\.(png|jpg|jpeg)$/, '.webp')} type="image/webp">
+              <source srcset={`${base}${post.data.photo.replace(/\.(png|jpg|jpeg)$/, '.webp')}`} type="image/webp">
               <img
-                src={post.data.photo}
+                src={`${base}${post.data.photo}`}
                 alt={`Featured image for ${post.data.title}`}
                 class="w-full h-auto rounded-lg"
                 loading="eager"
