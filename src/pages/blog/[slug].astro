@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { SITE_CONFIG } from '@/config';
 
 export async function getStaticPaths() {
   const blogPosts = await getCollection('blog');
@@ -19,26 +20,26 @@ const structuredData = {
   "@type": "BlogPosting",
   "headline": post.data.title,
   "description": post.data.description,
-  "image": post.data.photo ? `https://amirdaraee.com/${post.data.photo.replace(/\.(png|jpg|jpeg)$/, '.webp')}` : "https://amirdaraee.com/logo.webp",
+  "image": post.data.photo ? `${SITE_CONFIG.siteUrl}/${post.data.photo.replace(/\.(png|jpg|jpeg)$/, '.webp')}` : `${SITE_CONFIG.siteUrl}/logo.webp`,
   "datePublished": post.data.date.toISOString(),
   "dateModified": post.data.date.toISOString(),
   "author": {
     "@type": "Person",
     "name": post.data.author || "Amir Daraee",
-    "url": "https://amirdaraee.com"
+    "url": SITE_CONFIG.siteUrl
   },
   "publisher": {
     "@type": "Person",
     "name": "Amir Daraee",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://amirdaraee.com/logo.webp"
+      "url": `${SITE_CONFIG.siteUrl}/logo.webp`
     }
   },
   "keywords": post.data.keywords?.join(', ') || '',
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `https://amirdaraee.com/blog/${post.slug}`
+    "@id": `${SITE_CONFIG.siteUrl}/blog/${post.slug}`
   }
 };
 ---

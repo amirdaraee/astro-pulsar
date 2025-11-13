@@ -1,6 +1,6 @@
-# robots.txt for amirdaraee.com
+# robots.txt for GitHub Pages demo
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://amirdaraee.com/sitemap-index.xml
+Sitemap: https://amirdaraee.github.io/astro-pulsar/sitemap-index.xml
