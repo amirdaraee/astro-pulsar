@@ -4,11 +4,12 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  // Update this with your production URL
-  site: 'https://example.com',
+  // GitHub Pages URL
+  site: 'https://amirdaraee.github.io',
+  base: '/astro-pulsar',
 
-  // Output directory - change if needed (e.g., '../docs' for GitHub Pages)
-  // outDir: './dist',
+  // Output directory for GitHub Pages
+  outDir: './docs',
 
   integrations: [sitemap(), tailwind()],
 
