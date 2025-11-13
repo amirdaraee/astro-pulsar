@@ -12,6 +12,7 @@ interface Props {
   author?: string;
   publishedTime?: Date;
   tags?: string[];
+  showCopyright?: boolean;
   compactFooter?: boolean;
 }
 
@@ -23,6 +24,7 @@ const {
   author = SITE_CONFIG.author,
   publishedTime,
   tags,
+  showCopyright = true,
   compactFooter = false
 } = Astro.props;
 ---
@@ -94,7 +96,7 @@ const {
     <main class="flex-grow w-full relative" role="main" aria-label="Main content">
       <slot />
     </main>
-    <Footer compact={compactFooter} />
+    <Footer showCopyright={showCopyright} compact={compactFooter} />
   </body>
 </html>
 

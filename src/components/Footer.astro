@@ -1,11 +1,14 @@
 ---
 import { SITE_CONFIG } from '../config';
 
+const currentYear = new Date().getFullYear();
+
 interface Props {
+  showCopyright?: boolean;
   compact?: boolean;
 }
 
-const { compact = false } = Astro.props;
+const { showCopyright = true, compact = false } = Astro.props;
 const paddingClass = compact ? 'py-4' : 'py-8';
 
 // Social links configuration
@@ -61,4 +64,17 @@ const socialLinks = [
     </div>
   )}
   <!-- Social buttons end -->
+
+  {showCopyright && (
+    <>
+      <hr class="my-6 border-gray-300 dark:border-gray-700 w-full max-w-md mx-auto" />
+
+      <!-- Copyright -->
+      <div class="text-gray-600 dark:text-gray-400 text-sm">
+        Copyright © {currentYear}
+        <a href={SITE_CONFIG.siteUrl} class="text-gray-900 hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-400 font-medium">{SITE_CONFIG.author}</a>
+      </div>
+      <!-- Copyright end -->
+    </>
+  )}
 </footer>
