@@ -5,7 +5,7 @@ published: true
 date: 2024-01-05
 author: "amirdaraee"
 keywords: ["customization", "theming", "configuration", "design"]
-photo: "/stock/customization.webp"
+photo: "/sample-1.webp"
 language: "en"
 ---
 
