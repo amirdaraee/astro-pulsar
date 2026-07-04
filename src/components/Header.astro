@@ -9,7 +9,7 @@ const base = import.meta.env.BASE_URL;
 const navLinks = NAV_ITEMS.filter(item => item.href !== '/');
 ---
 
-<header class="bg-white dark:bg-gray-900 w-full z-50 py-2 transition-colors duration-200">
+<header class="relative bg-white dark:bg-gray-900 w-full z-50 py-2 transition-colors duration-200">
   <!-- Skip to main content link for accessibility -->
   <a href="#main-content" class="skip-to-content">
     Skip to main content
@@ -57,8 +57,8 @@ const navLinks = NAV_ITEMS.filter(item => item.href !== '/');
       </div>
     </nav>
 
-    <!-- Mobile menu (hidden by default) -->
-    <div class="hidden md:hidden" id="mobile-menu">
+    <!-- Mobile menu (hidden by default); overlays the page instead of pushing content down -->
+    <div class="hidden md:hidden absolute left-0 right-0 top-full z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-lg transition-colors duration-200" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1 text-center">
         {navLinks.map(item => (
           <a href={`${base}${item.href.replace(/^\//, "")}`} class="block px-3 py-2 text-gray-900 hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-400 font-medium uppercase tracking-wide transition-colors duration-200">{item.label}</a>
