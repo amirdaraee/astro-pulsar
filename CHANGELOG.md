@@ -11,13 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Features
 
 * open external markdown links in a new tab ([e969026](https://github.com/amirdaraee/astro-pulsar/commit/e969026c177c3017f653b66c3047342f736bcbb5))
-* related posts, external links in new tab, mobile menu overlay ([878dc51](https://github.com/amirdaraee/astro-pulsar/commit/878dc51b55ecedb5c313d917be096299185bb0e3))
 * show related posts by shared tags on blog posts ([c194684](https://github.com/amirdaraee/astro-pulsar/commit/c194684a4c2a083a6ef813de217113e0a7f1b350))
 
 
 ### Bug Fixes
 
-* **deps:** update dependencies and resolve security advisories ([6951c63](https://github.com/amirdaraee/astro-pulsar/commit/6951c6318440db328531375704ce0ceb5de3bd70))
 * **deps:** update dependencies and resolve security advisories ([1839214](https://github.com/amirdaraee/astro-pulsar/commit/1839214f4bbaf02bbea262c760c2ad7641abdd19))
 * overlay the mobile menu instead of pushing page content down ([4ced27d](https://github.com/amirdaraee/astro-pulsar/commit/4ced27d3cffa85323187038c68e8ab03cc28fc1a))
 
