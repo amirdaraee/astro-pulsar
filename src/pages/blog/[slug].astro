@@ -12,20 +12,35 @@ export async function getStaticPaths() {
     .filter((p) => p.data.published)
     .sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
 
+  const tagSlugs = (p: (typeof blogPosts)[number]) =>
+    new Set((p.data.keywords ?? []).map(slugifyTag));
+
   return blogPosts.map((post) => {
     const i = published.findIndex((p) => p.id === post.id);
+
+    // Related posts: rank published posts by shared tags, newest first on ties
+    const postTags = tagSlugs(post);
+    const related = published
+      .filter((p) => p.id !== post.id)
+      .map((p) => ({ p, shared: [...tagSlugs(p)].filter((t) => postTags.has(t)).length }))
+      .filter((r) => r.shared > 0)
+      .sort((a, b) => b.shared - a.shared || b.p.data.date.valueOf() - a.p.data.date.valueOf())
+      .slice(0, 3)
+      .map((r) => r.p);
+
     return {
       params: { slug: post.id },
       props: {
         post,
         prev: i > 0 ? (published[i - 1] ?? null) : null,
         next: i >= 0 && i < published.length - 1 ? (published[i + 1] ?? null) : null,
+        related,
       },
     };
   });
 }
 
-const { post, prev, next } = Astro.props;
+const { post, prev, next, related } = Astro.props;
 const { Content } = await render(post);
 const minutes = readingTime(post.body ?? '');
 
@@ -131,6 +146,22 @@ const structuredData = {
       </div>
 
       <hr class="my-10 border-gray-300 dark:border-gray-700" role="separator" />
+
+      {related.length > 0 && (
+        <section class="mb-10" aria-labelledby="related-posts-heading">
+          <h2 id="related-posts-heading" class="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Related posts</h2>
+          <ul class="space-y-3 list-none p-0 m-0">
+            {related.map((r) => (
+              <li>
+                <a href={`${base}blog/${r.id}`} class="text-blue-600 dark:text-blue-400 hover:underline font-medium">{r.data.title}</a>
+                <time datetime={r.data.date.toISOString()} class="text-gray-500 dark:text-gray-400 text-sm ml-2">
+                  {r.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                </time>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <nav aria-label="Post navigation" class="space-y-6">
         {(prev || next) && (
