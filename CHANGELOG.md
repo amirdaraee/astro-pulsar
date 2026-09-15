@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0](https://github.com/amirdaraee/astro-pulsar/compare/v0.5.0...v0.6.0) (2026-09-15)
+
+
+### Features
+
+* open external markdown links in a new tab ([e969026](https://github.com/amirdaraee/astro-pulsar/commit/e969026c177c3017f653b66c3047342f736bcbb5))
+* show related posts by shared tags on blog posts ([c194684](https://github.com/amirdaraee/astro-pulsar/commit/c194684a4c2a083a6ef813de217113e0a7f1b350))
+
+
+### Bug Fixes
+
+* **deps:** update dependencies and resolve security advisories ([1839214](https://github.com/amirdaraee/astro-pulsar/commit/1839214f4bbaf02bbea262c760c2ad7641abdd19))
+* overlay the mobile menu instead of pushing page content down ([4ced27d](https://github.com/amirdaraee/astro-pulsar/commit/4ced27d3cffa85323187038c68e8ab03cc28fc1a))
+
 ## [0.5.0](https://github.com/amirdaraee/astro-pulsar/compare/v0.4.1...v0.5.0) (2026-07-03)
 
 

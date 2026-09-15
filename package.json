@@ -1,7 +1,7 @@
 {
   "name": "astro-pulsar",
   "type": "module",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Pulsar - A fast, modern Astro blog theme with flash-free dark mode, Shiki syntax highlighting, RSS, tag pages, reading time, and comprehensive SEO. Built with Tailwind CSS.",
   "author": "amirdaraee",
   "license": "MIT",
