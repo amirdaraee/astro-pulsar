@@ -8,6 +8,11 @@ updates:
       npm-dependencies:
         patterns:
           - "*"
+    ignore:
+      # TypeScript 7 (native compiler) has no JS API; @astrojs/check needs ^5 || ^6.
+      # Remove once @astrojs/check supports TypeScript 7.
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: github-actions
     directory: "/"
     schedule:

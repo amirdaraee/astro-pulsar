@@ -138,7 +138,7 @@ BREAKING CHANGE: SITE_CONFIG structure has changed, see migration guide"
    ```
 
 4. **Create Pull Request**
-   - Use a clear, descriptive title
+   - Use a [conventional commit](https://www.conventionalcommits.org/) title (e.g. `feat: add search`, `fix: header overlap`) — PRs are squash-merged and the title becomes the changelog entry
    - Follow the PR template if provided
    - Reference any related issues (#123)
    - Include screenshots for UI changes
@@ -150,7 +150,7 @@ BREAKING CHANGE: SITE_CONFIG structure has changed, see migration guide"
    - Update your PR based on review comments
 
 6. **After Merge**
-   - Delete your feature branch
+   - The feature branch is deleted automatically on GitHub; delete your local copy
    - Pull the latest main branch
 
 ## Coding Standards
