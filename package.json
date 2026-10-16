@@ -43,16 +43,16 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
-    "@astrojs/markdown-remark": "^7.3.1",
+    "@astrojs/markdown-remark": "^7.3.2",
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
-    "astro": "^7.3.2",
+    "astro": "^7.3.8",
     "rehype-external-links": "^3.0.0",
     "typescript": "^6.0.3"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
-    "@types/node": "^26.5.1",
+    "@types/node": "^26.6.5",
     "tailwindcss": "^4.3.3"
   }
 }
